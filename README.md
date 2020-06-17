@@ -9,4 +9,7 @@ we are doing this to enhance the efforts done by our community leaders fighting 
 ## Hands on Practice
 we started this project with zero experience in data science, and to reach our goal we had to go through some steps.  
 we had to learn about image processing, Ai, machine learning, neural networks and deep learning and what underlies them of technologies and tools like python, matlab, pytorch, keras and tensorflow.  
-after being familiar with the concepts of machine learning and deep learning we started using these tools and technologies to create models and to train them on different datasets in order to increase our level of understanding of the concepts of neural networks.  
+after being familiar with the concepts of machine learning and deep learning we started using these tools and technologies to create models and to train them on different datasets in order to increase our level of understanding of the concepts of neural networks.   
+we divided ourselves to groubs, and every groub uses a different technology to measure and compare the performance between technologies and to determine which technology we are going to use in the whole project.  
+#### matlab
+
