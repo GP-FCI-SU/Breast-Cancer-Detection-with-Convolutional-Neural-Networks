@@ -14,4 +14,8 @@ we divided ourselves to groubs, and every groub uses a different technology to m
 #### matlab  
 we tested an example with matlab using the version 2019b that comes with the deep learning toolbox that provides great visualization of the convolutional neural networks but we decided not to continue using it because somee complexities and errors we faced during testing.  
 #### pytorch
-The network we’re going to build will perform MNIST digit classification
+another example we tested using pytorch, the network in the example will perform MNIST digit classification.  
+the input images will be 28 x 28 pixel greyscale representations of digits. The first layer will consist of 32 channels of 5 x 5 convolutional filters + a ReLU activation, followed by 2 x 2 max pooling down-sampling with a stride of 2 (this gives a 14 x 14 output). In the next layer, we have the 14 x 14 output of layer 1 being scanned again with 64 channels of 5 x 5 convolutional filters and a final 2 x 2 max pooling (stride = 2) down-sampling to produce a 7 x 7 output of layer 2.  
+After the convolutional part of the network, there will be a flatten operation which creates 7 x 7 x 64 = 3164 nodes, an intermediate layer of 1000 fully connected nodes and a softmax operation over the 10 output nodes to produce class probabilities. These layers represent the output classifier.  
+ the network quite rapidly achieves a high degree of accuracy on the training set, and the test set accuracy and you can see the full implementation in **pytorch_convnet.py**.
+ #### tensorflow
