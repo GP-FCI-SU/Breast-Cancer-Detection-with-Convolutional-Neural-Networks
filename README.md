@@ -39,6 +39,23 @@ In order to create a training dataset of adequate size which included both norma
 
 For the CBIS-DDSM images the masks were used to isolate and extract the ROI from each image. For the DDSM images we simply created tiles of each scan and included them as long as they met certain criteria.
 Both offline and online data augmentation was used to increase the size of the datasets.
+#### Training Datasets
+Multiple datasets were created using different ROI extraction techniques and amounts of data augmentation. The datasets ranged in size from 27,000 training images to 62,000 training images.
+
+Datasets 1 through 5 did not properly separate the training and test data and thus are not referenced in this work.
+1.	Dataset 6 consisted of 62,764 images. This dataset was created to be as large as possible, and each ROI is extracted multiple times in multiple ways using both ROI extraction methods described below. Each ROI was extracted with fixed context, with padding, at its original size, and if the ROI was larger than our target image it was also extracted as overlapping tiles.
+
+2.	Dataset 8 consisted of 40,559 images. This dataset used the extraction method 1 described below to provide greater context for each ROI. This dataset was created for the purpose of classifying the ROIs by their type and pathology.
+
+3.	Dataset 9 consisted of 43,739 images. The previous datasets had used zoomed images of the ROIs, which was problematic as it required the ROI to be pre-identified and isolated. This dataset was created using extraction method 2 described below.
+
+As Dataset 9 was the only dataset that did not resize the images based on the size of the ROI we felt that it introduced the least amount of artificial manipulation into the data and after it was created we focused on training with this dataset.
+
+The CBIS-DDSM scans were of relatively large size, with a mean height of 5295 pixels and a mean width of 3131 pixels. Masks highlighting the ROIs were provided. The masks were used to define a square which completely enclosed the ROI. Some padding was added to the bounding box to provide context and then the ROIs were extracted at 598x598 and then resized down to 299x299 so they could be input into the ConvNet.
+The ROIs had a mean size of 450 pixels and a standard deviation of 396. We designed our ConvNets to accept 299x299 images as input. To simplify the creation of the images, we extracted each ROI to a 598x598 tile, which was then sized down by half on each dimension to 299x299. 598x598 was just large enough that the majority of the ROIs could fit into it.
+
+To increase the size of the training data, each ROI was extracted multiple times using the methodologies described below. The size and variety of the data was also increased by randomly horizontally flipping each tile, randomly vertically flipping each tile, randomly rotating each tile, and by randomly positioning each ROI within the tile.
+
 
  
  
