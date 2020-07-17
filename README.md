@@ -24,7 +24,7 @@ After the convolutional part of the network, there will be a flatten operation w
  and you can see the architecture of the model and all the results of the training accuracy and the training loss as well as the validation accuracy and validation loss,   
  and you can see the full implementation in **catvsdogs.ipynb**.  
  so we decided to continue our project with tensorflow because its super performance and ease of implementation.  
- #### Dataset
+ ## Dataset
  DDSM is a well-known dataset of normal and abnormal scans, and one of the few publicly available datasets of mammography imaging. Unfortunately, the size of the dataset is relatively small. To increase the amount of training data we extract the Regions of Interest (ROI) from each image, perform data augmentation and then train ConvNets on the augmented data. The ConvNets were trained to predict both whether a scan was normal or abnormal, and to predict whether abnormalities were calcifications or masses and benign or malignant.
 
 The MIAS dataset is a very small set of mammography images, consisting of 330 scans of all classes. The scans are standardized to a size of 1024x1024 pixels. The size of the dataset made this unusable for training, but it was used for exploratory data analysis and as a supplementary test data set.
@@ -39,7 +39,7 @@ In order to create a training dataset of adequate size which included both norma
 
 For the CBIS-DDSM images the masks were used to isolate and extract the ROI from each image. For the DDSM images we simply created tiles of each scan and included them as long as they met certain criteria.
 Both offline and online data augmentation was used to increase the size of the datasets.
-#### Training Datasets
+### Training Datasets
 Multiple datasets were created using different ROI extraction techniques and amounts of data augmentation. The datasets ranged in size from 27,000 training images to 62,000 training images.
 
 Datasets 1 through 5 did not properly separate the training and test data and thus are not referenced in this work.
@@ -55,19 +55,19 @@ The CBIS-DDSM scans were of relatively large size, with a mean height of 5295 pi
 The ROIs had a mean size of 450 pixels and a standard deviation of 396. We designed our ConvNets to accept 299x299 images as input. To simplify the creation of the images, we extracted each ROI to a 598x598 tile, which was then sized down by half on each dimension to 299x299. 598x598 was just large enough that the majority of the ROIs could fit into it.
 
 To increase the size of the training data, each ROI was extracted multiple times using the methodologies described below. The size and variety of the data was also increased by randomly horizontally flipping each tile, randomly vertically flipping each tile, randomly rotating each tile, and by randomly positioning each ROI within the tile.
-#### Training ConvNets
+## Training ConvNets
 when we started evaluating the models we faced a big problem that is the processing power of our devices isn't suitable to run the training and it was a bootleneck for us   
 while evaluating these models and the main reason for not trying a lot of models with different architectures that will need more and more processing power so we had to use the public cloud of google; google collaboratory known as google colab it provides us with GPU and RAM  that is able to train our models.  
 we faced another problem when using google colab that is the GPU isn't always available and internet connection problems.  
 We evaluated a large number of models on our dataset more than 30 models but the uploaded models here are the latest and the best results.  
 we will demonstrate 2 models with thier architecture and graphs and results.  
 
-#### model_4_d.ipynb
-##### Model description
+### model_4_d.ipynb
+#### Model description
 We design the model based on known models the VGG model for example. The model is really deep With 9 convolution layers all with the same 3X3 filter with different numbers and different sequence Also has 5 max pooling layers and 3 dense layers. The model has 43,720,193 Trainable parameters.
 Model training time is 2h:55m using google colab fast GPUs.
 
-##### Model architecture
+####Model architecture
 
 
 
