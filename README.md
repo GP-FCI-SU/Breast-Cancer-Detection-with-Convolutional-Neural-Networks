@@ -19,3 +19,32 @@ the input images will be 28 x 28 pixel greyscale representations of digits. The 
 After the convolutional part of the network, there will be a flatten operation which creates 7 x 7 x 64 = 3164 nodes, an intermediate layer of 1000 fully connected nodes and a softmax operation over the 10 output nodes to produce class probabilities. These layers represent the output classifier.  
  the network quite rapidly achieves a high degree of accuracy on the training set, and the test set accuracy and you can see the full implementation in **pytorch_convnet.py**.
  #### tensorflow
+ after implementing a lot of examples using tensorflow we decided to create a model with the most famous example that all data scientists start with; the cats&dogs problem.  
+ So, we created a model and we trained and tested it and the results was formidable to start with.  
+ and you can see the architecture of the model and all the results of the training accuracy and the training loss as well as the validation accuracy and validation loss,   
+ and you can see the full implementation in **catvsdogs.ipynb**.  
+ so we decided to continue our project with tensorflow because its super performance and ease of implementation.  
+ #### Dataset
+ DDSM is a well-known dataset of normal and abnormal scans, and one of the few publicly available datasets of mammography imaging. Unfortunately, the size of the dataset is relatively small. To increase the amount of training data we extract the Regions of Interest (ROI) from each image, perform data augmentation and then train ConvNets on the augmented data. The ConvNets were trained to predict both whether a scan was normal or abnormal, and to predict whether abnormalities were calcifications or masses and benign or malignant.
+
+The MIAS dataset is a very small set of mammography images, consisting of 330 scans of all classes. The scans are standardized to a size of 1024x1024 pixels. The size of the dataset made this unusable for training, but it was used for exploratory data analysis and as a supplementary test data set.
+
+The University of California Irvine Machine Learning Repository contains several datasets related to breast cancer. These consist of one dataset which describes the characteristics of abnormalities and two which describe the characteristics of cell nuclei taken from fine needle biopsies. These were used for exploratory data analysis to gain insight into the characteristics of abnormalities.
+
+The DDSM is a database of 2,620 scanned film mammography studies. It contains normal, benign, and malignant cases with verified pathology information. The DDSM is saved as Lossless JPEGs, an archaic format which has not been maintained for several decades.
+
+The CBIS-DDSM collection includes a subset of the DDSM data selected and curated by a trained mammographer. The CBIS-DDSM images have been pre-processed and saved as DiCom images, and thus are better quality than the DDSM images, but this dataset only contains scans with abnormalities. In order to create a dataset which can be used to predict the presence of abnormalities, the ROIs were extracted from the CBIS-DDSM dataset and combined with normal images taken from the DDSM dataset.
+
+In order to create a training dataset of adequate size which included both normal and abnormal scans, images from the CBIS-DDSM dataset were combined with images from the DDSM dataset. While the CBIS-DDSM dataset included cropped and zoomed images of the Regions of Interest (ROIs), in order to have greater control over the data, we extracted the ROIs ourselves using the masks provided with the dataset.
+
+For the CBIS-DDSM images the masks were used to isolate and extract the ROI from each image. For the DDSM images we simply created tiles of each scan and included them as long as they met certain criteria.
+Both offline and online data augmentation was used to increase the size of the datasets.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
