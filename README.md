@@ -67,7 +67,9 @@ we will demonstrate 2 models with thier architecture and graphs and results.
 We design the model based on known models the VGG model for example. The model is really deep With 9 convolution layers all with the same 3X3 filter with different numbers and different sequence Also has 5 max pooling layers and 3 dense layers. The model has 43,720,193 Trainable parameters.
 Model training time is 2h:55m using google colab fast GPUs.
 
-####Model architecture
+#### Model architecture
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
 
