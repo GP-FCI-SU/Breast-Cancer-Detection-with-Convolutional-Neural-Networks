@@ -69,7 +69,7 @@ Model training time is 2h:55m using google colab fast GPUs.
 
 #### Model architecture
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model_4.png)
 
 
 
