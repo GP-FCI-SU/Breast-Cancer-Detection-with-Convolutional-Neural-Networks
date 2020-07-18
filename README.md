@@ -69,12 +69,23 @@ Model training time is 2h:55m using google colab fast GPUs.
 * Changing the optimizer to ADAM which is an adaptive learning rate optimization algorithm that’s been designed specifically for training deep neural networks. Adam can be looked at as a combination of RMSprop and Stochastic Gradient Descent with momentum. It uses the squared gradients to scale the learning rate like RMSprop and it takes advantage of momentum by using moving average of the gradient instead of gradient itself like SGD with momentum.  
 * Weight balancing balances our data by altering the weight that each 	training example carries when computing the loss.
 
-the pixel values in images are normalized between 0 and 1 in model_4_d. image normalization has a big impact when working with machine learning and deep learning algorithms. 
+* the pixel values in images are normalized between 0 and 1 in model_4_d. image normalization has a big impact when working with machine learning and deep learning algorithms. 
 
 
 #### Model architecture
 
 ![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model_4.png)
+
+
+#### Model logs and output
+
+![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4res.png)
+
+![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4acc.png)
+
+![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4loss.png)
+
+
 
 
 
