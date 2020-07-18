@@ -81,9 +81,9 @@ Model training time is 2h:55m using google colab fast GPUs.
 
 ![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4res.png)
 
-![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4acc.png)
+![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4acc.png) ![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4loss.png)
 
-![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4loss.png)
+
 
 
 
