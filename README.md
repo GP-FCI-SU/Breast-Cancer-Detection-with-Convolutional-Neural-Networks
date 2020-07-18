@@ -84,6 +84,9 @@ Model training time is 2h:55m using google colab fast GPUs.
 ![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4acc.png) ![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4loss.png)
 
 
+The prediction of the testing recall is 0.72 for the model after 30 epochs While the validation accuracy is 0.94 this means the model starts to classify most of cases as positive after more five epochs the recall become 0.77 with the same validation accuracy but the validation loss increased Of course this result make sense because of the weight balancing technique we used in this model. after five more epochs (40 epochs) the model accuracy and recall decreased to 0.92 and 0.68 where the model gets worse. We mentioned before that the testing data which from MIAS images dataset come from a completely different distribution than the training data which come from DDSM images, And after five (45 epochs) more the model is over fitting the training data(training accuracy =0.96 loss=.03) and the validation accuracy decreased to 0.91 as shown below in  epochs 40 to 45:
+
+![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4accuracy.png)
 
 
 
