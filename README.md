@@ -62,7 +62,7 @@ we faced another problem when using google colab that is the GPU isn't always av
 We evaluated a large number of models on our dataset more than 30 models but the uploaded models here are the latest and the best results.  
 we will demonstrate 2 models with thier architecture and graphs and results.  
 
-### model_4_d.ipynb
+### model_4_d
 #### Model description
 We design the model based on known models the VGG model for example. The model is really deep With 9 convolution layers all with the same 3X3 filter with different numbers and different sequence Also has 5 max pooling layers and 3 dense layers. The model has 43,720,193 Trainable parameters.
 Model training time is 2h:55m using google colab fast GPUs.
@@ -88,7 +88,7 @@ The prediction of the testing recall is 0.72 for the model after 30 epochs While
 
 ![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model4accuracy.png)
 
-
+### model_5_e
 
 
 
