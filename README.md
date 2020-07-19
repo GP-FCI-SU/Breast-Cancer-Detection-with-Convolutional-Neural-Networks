@@ -90,6 +90,23 @@ The prediction of the testing recall is 0.72 for the model after 30 epochs While
 
 ### model_5_e
 
+#### Model description
+In this model we use transfer leaning from a pre-trained network. A pre-trained model is a saved network that was previously trained on a large dataset. 
+The network used is the MobileNet V2 model developed at Google. This is pre-trained dataset, on the ImageNet a large dataset consisting of 1.4M images and 1000 classes. ImageNet is a research training dataset with a wide variety of categories. 
+In this model we train the up 100 layers of MobileNet model
+#### Model structure
+In this model we train (or "fine-tune") the weights of the 100 top layers of the MobileNet model alongside the training of the classifier we added. The training process will force the weights to be tuned from generic feature maps to features associated specifically with the breast cancer dataset.
+
+The classifier layers are three fully connected layers to the model on have with 1024,2048,1 neurons respectively. Also we keep the class weights with a ratio of 3 to 7 for class 0 and 1 respectively but after 35 epochs we change the ratio to be 2 to 8.and after more epochs the ratio changed.
+#### Training logs and output
+
+![Image of model_5](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model5acc.png)![Image of model_5](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model5loss.png)
+
+![Image of model_4](https://github.com/GP-FCI-SU/Breast-Cancer-Detection-with-Convolutional-Neural-Networks/blob/master/model5res.png)
+
+Use the same class weights with ratio 3:7. after 15 epochs the training accuracy =99% , validation accuracy=98% and recall =95% which the best matrics of the model we countinue training and measureing metrics to 35 epochs but with more training epochs the model gets worse with prediction of positive cases.
+
+
 
 
 
