@@ -106,6 +106,19 @@ The classifier layers are three fully connected layers to the model on have with
 
 Use the same class weights with ratio 3:7. after 15 epochs the training accuracy =99% , validation accuracy=98% and recall =95% which the best matrics of the model we countinue training and measureing metrics to 35 epochs but with more training epochs the model gets worse with prediction of positive cases.
 
+### Conclusion
+
+We were able to achieve better than expected results as 98% for the validation accuracy and 95% for the recall. as a proof of concept, we feel that we have demonstrated that ConvNets can successfully be trained to predict whether mammograms are normal or abnormal.
+The life and death nature of diagnosing cancer creates many obstacles to putting a system like this into practice. We feel that using a system to output the probabilities rather than the predictions would allow such a system to provide additional information to radiologists rather than replacing them. In addition, the ability to adjust the decision threshold would allow radiologists to focus on more ambiguous scans while devoting less time to scans which have very low probabilities.
+this helps in eliminating the unnecessary waiting time as well as reducing human and technical errors in diagnosing Breast Cancer.
+
+### Future work
+*creating a system which would take an entire, unaltered scan.
+*collecting the dataset and implementing preprocessing on it.
+*classify mammogram images into multiple classes.
+*trying new ConvNets architectures. 
+*creating user interface for the radiologists. 
+
 
 
 
