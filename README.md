@@ -113,11 +113,11 @@ The life and death nature of diagnosing cancer creates many obstacles to putting
 this helps in eliminating the unnecessary waiting time as well as reducing human and technical errors in diagnosing Breast Cancer.
 
 ### Future work
-*creating a system which would take an entire, unaltered scan.
-*collecting the dataset and implementing preprocessing on it.
-*classify mammogram images into multiple classes.
-*trying new ConvNets architectures. 
-*creating user interface for the radiologists. 
+* creating a system which would take an entire, unaltered scan.
+* collecting the dataset and implementing preprocessing on it.
+* classify mammogram images into multiple classes.
+* trying new ConvNets architectures. 
+* creating user interface for the radiologists. 
 
 
 
